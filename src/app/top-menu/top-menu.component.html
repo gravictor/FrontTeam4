@@ -1,0 +1,71 @@
+<div>
+	<header>
+		<nav role="navigation">
+			<ul>
+				<li>
+					<a routerLink="/mainpage">
+						<div>
+							Главная
+							<span>Полная информация</span>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="/blog">
+						<div>
+				Парковка  
+							<span>Информация про паркинг</span>
+						</div>
+					</a>
+					<div>
+						<ul>
+							<li><a href="#">Админ-панель</a></li>
+							<li><a href="#">Общая информация</a></li>
+							<li><a routerLink="/gatesinfo">Список шлагбаунов</a></li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<a href="/contact">
+						<div>
+				Эл ключ
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="/forum">
+						<div>
+				Уведомления 
+				<span>Общая информация</span>
+						</div>
+					</a>
+					<div>
+						<ul>
+							<li><a href="notifications">список уведомлений</a></li>
+							<li><a href="#">Настройки</a></li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<a href="/forum">
+						<div>
+				Коммун услуги 
+							<span>Информация о платежах</span>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="/forum">
+						<div>
+				Вход/Регистрация
+						</div>
+					</a>
+				</li>
+			</ul>
+		</nav>
+		
+	</header>
+	
+	<div><router-outlet></router-outlet></div>
+	</div>
+	

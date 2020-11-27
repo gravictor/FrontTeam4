@@ -1,0 +1,32 @@
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div style="text-align: center;">
+<table class="features-table">
+    <tr>
+        <th>
+            id
+        </th>
+        <th>
+            gate name
+        </th>
+        <th>
+            description
+        </th>
+    </tr>
+    <tr *ngFor = "let resp of responce | async">
+        <td>
+            {{resp.id | json}}
+        </td>
+        <td>
+            {{resp.name | json}}
+        </td>
+        <td>
+            {{resp.description | json}}
+        </td>
+    </tr>
+</table>
+</div>

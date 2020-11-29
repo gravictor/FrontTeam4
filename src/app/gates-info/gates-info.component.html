@@ -4,6 +4,19 @@
 <br>
 <br>
 <br>
+
+<div class="form-group">
+    <label>Название</label>
+    <input class="form-control" name="username" [(ngModel)]="gate.name" />
+</div>
+<div class="form-group">
+    <label>Описание</label>
+    <input class="form-control" name="description" [(ngModel)]="gate.description" />
+</div>
+<div class="form-group">
+    <button class="btn btn-default" (click)="post(gate)">Отправить</button>
+</div>
+ <br><br>
 <div style="text-align: center;">
 <table class="features-table">
     <tr>
@@ -16,6 +29,12 @@
         <th>
             description
         </th>
+        <th>
+            edit
+        </th>
+        <th>
+            delete
+        </th>
     </tr>
     <tr *ngFor = "let resp of responce | async">
         <td>
@@ -27,12 +46,12 @@
         <td>
             {{resp.description | json}}
         </td>
+        <td>
+            <a href="" class="button-5"><span class="link-content">Изменить</span></a>
+        </td>
+        <td>
+            <a href="/gatesinfo" class="button-5" (click)="delete(resp.id)"><span class="link-content">Удалить</span></a>
+        </td>
     </tr>
 </table>
-</div>
-<br><br>
-<div style="text-align: center;">
-        <a href="" class="button-5"><span class="link-content">Добавить</span></a>
-        <a href="" class="button-5"><span class="link-content">Изменить</span></a>
-        <a href="" class="button-5"><span class="link-content">Удалить</span></a>
 </div>

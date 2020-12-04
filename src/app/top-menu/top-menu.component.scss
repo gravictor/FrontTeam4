@@ -9,7 +9,7 @@ html {font-size: 100%;height: auto !important;height: 100%;-webkit-text-size-adj
 body { background: #f2f2f2;color: #222;-webkit-font-smoothing: antialiased;font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;font-size: 1.05em;font-weight: 400;height: auto !important;height: 100%;line-height: 1.6rem;min-height: 100%;}
 /*NAV*/
 	header {
-		background: linear-gradient(to left,rgba(92, 92, 95, 0.96) 0,rgba(114, 117, 117, 0.96) 100%);
+		background: linear-gradient(to left,rgba(10, 10, 10, 0.96) 0,rgba(8, 8, 8, 0.96) 100%);
 		border-bottom: 1px solid rgba(0,0,0,.1);
 		box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
 		display: block;
@@ -17,7 +17,10 @@ body { background: #f2f2f2;color: #222;-webkit-font-smoothing: antialiased;font-
 		width: 100%;
 		z-index: 1000;
 	}
-	
+	a{
+		
+		color: #f8df00;
+	}
 	header > nav > ul {
 		display: flex;
 		flex-wrap: wrap;
@@ -25,6 +28,9 @@ body { background: #f2f2f2;color: #222;-webkit-font-smoothing: antialiased;font-
 		list-style: none;
 		margin: 0;
 		padding: 0;
+		
+
+		color: #f8df00;
 	}
 	
 		header > nav > ul > li {
@@ -36,17 +42,19 @@ body { background: #f2f2f2;color: #222;-webkit-font-smoothing: antialiased;font-
 		}
 		
 			header > nav > ul > li:hover {
-				background: rgb(70, 71, 71);
+				background: rgb(0, 0, 0);
 			}
 			
 			header > nav > ul > li a + div {
-				background: linear-gradient(to bottom,rgb(44, 44, 44) 0,rgba(92, 84, 84, 0.96) 100%);;
+				background: linear-gradient(to bottom,rgb(0, 0, 0) 0,rgba(0, 0, 0, 0.96) 100%);;
 				border-radius: 0 0 2px 2px;
 				box-shadow: 0 3px 1px rgba(0,0,0,.05);
 				display: none;
 				font-size: 1rem;
 				position: absolute;
 				width: 170px;
+				
+				color: #f8df00;
 			}
 			
 				header > nav > ul > li:hover a + div {
@@ -60,10 +68,13 @@ body { background: #f2f2f2;color: #222;-webkit-font-smoothing: antialiased;font-
 					header > nav > ul > li a + div > ul > li {
 						margin: 0;
 						padding: 0;
+						
+						color: #f8df00;
 					}
 					
 						header > nav > ul > li a + div > ul > li > a {
-							color: rgba(255,255,255,.9);
+							
+							color: #f8df00;
 							display: block;	
 							font-size: .75rem;
 							letter-spacing: 1.5px;
@@ -77,7 +88,8 @@ body { background: #f2f2f2;color: #222;-webkit-font-smoothing: antialiased;font-
 	
 			header > nav > ul > li > a {
 				align-items: flex-start;
-				color: #fff;
+				
+				color: #f8df00;
 				display: flex;
 				font-size: 1.55rem;
 				font-weight: 200;

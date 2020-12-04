@@ -4,7 +4,16 @@
 <br>
 <br>
 <br>
-
+<mat-slider min="1" max="100" step="1" value="1"></mat-slider>
+<ol>
+    <li>
+      <mat-form-field>
+        <mat-label>What's your name?</mat-label>
+        <input matInput [(ngModel)]="name">
+      </mat-form-field>
+    </li>
+    <li>
+      <button mat-raised-button (click)="openDialog()">Pick one</button>
 <div class="form-group">
     <label>Название</label>
     <input class="form-control" name="username" [(ngModel)]="gate.name" />
@@ -30,10 +39,16 @@
             description
         </th>
         <th>
-            edit
+            type_id
         </th>
         <th>
-            delete
+            building_id
+        </th>
+        <th>
+            active
+        </th>
+        <th>
+            edit
         </th>
     </tr>
     <tr *ngFor = "let resp of responce | async">
@@ -47,10 +62,16 @@
             {{resp.description | json}}
         </td>
         <td>
-            <a href="" class="button-5"><span class="link-content">Изменить</span></a>
+            {{resp.typeId | json}}
         </td>
         <td>
-            <a href="/gatesinfo" class="button-5" (click)="delete(resp.id)"><span class="link-content">Удалить</span></a>
+            {{resp.buildingId | json}}
+        </td>
+        <td>
+            {{resp.active | json}}
+        </td>
+        <td>
+            <a href="" class="button-5"><span class="link-content">Изменить</span></a>
         </td>
     </tr>
 </table>

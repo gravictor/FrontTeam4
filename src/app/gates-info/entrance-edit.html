@@ -1,0 +1,46 @@
+<div class="block">
+    <h2 mat-dialog-title>Изменить</h2>
+  
+    <mat-form-field style="width: 40vh">
+      <mat-label>id</mat-label>
+      <input matInput value="{{gate.id}}">
+    </mat-form-field>
+  
+    <mat-form-field style="width: 40vh">
+      <mat-label>Название</mat-label>
+      <input matInput value="{{gate.name}}">
+    </mat-form-field>
+  
+    <mat-form-field style="width: 40vh">
+      <mat-label>Описание</mat-label>
+      <input matInput value="{{gate.description}}">
+    </mat-form-field>
+  
+    <mat-form-field style="width: 40vh">
+      <mat-label>TypeId</mat-label>
+      <input matInput value="{{gate.typeId}}">
+    </mat-form-field>
+  
+    <mat-form-field style="width: 40vh">
+      <mat-label>BuildingId</mat-label>
+      <input matInput value="{{gate.buildingId}}">
+    </mat-form-field>
+  
+    <mat-form-field style="width: 40vh">
+      <mat-label>roleId</mat-label>
+      <input matInput value="{{gate.roleId}}">
+      <mat-error *ngIf="formControl.hasError('required')">
+        RoleId is <strong>required</strong>
+      </mat-error>
+    </mat-form-field>
+  
+    <mat-form-field style="width: 40vh">
+      <mat-label>active</mat-label>
+      <input matInput value="{{gate.isActive}}">
+    </mat-form-field>
+  
+    <mat-dialog-actions>
+      <button mat-raised-button mat-dialog-close>Отмена</button>
+      <button (click)="confirmUpdate()" mat-raised-button>Подтвердить</button>
+    </mat-dialog-actions>
+  </div>

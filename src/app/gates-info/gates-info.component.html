@@ -4,27 +4,8 @@
 <br>
 <br>
 <br>
-<mat-slider min="1" max="100" step="1" value="1"></mat-slider>
-<ol>
-    <li>
-      <mat-form-field>
-        <mat-label>What's your name?</mat-label>
-        <input matInput [(ngModel)]="name">
-      </mat-form-field>
-    </li>
-    <li>
-      <button mat-raised-button (click)="openDialog()">Pick one</button>
+      <button mat-raised-button (click)="openDialog()">Добавить</button>
 <div class="form-group">
-    <label>Название</label>
-    <input class="form-control" name="username" [(ngModel)]="gate.name" />
-</div>
-<div class="form-group">
-    <label>Описание</label>
-    <input class="form-control" name="description" [(ngModel)]="gate.description" />
-</div>
-<div class="form-group">
-    <button class="btn btn-default" (click)="post(gate)">Отправить</button>
-</div>
  <br><br>
 <div style="text-align: center;">
 <table class="features-table">
@@ -71,7 +52,7 @@
             {{resp.active | json}}
         </td>
         <td>
-            <a href="" class="button-5"><span class="link-content">Изменить</span></a>
+            <a (click)="openEditDialog(resp)" class="button-5"><span class="link-content">Изменить</span></a>
         </td>
     </tr>
 </table>

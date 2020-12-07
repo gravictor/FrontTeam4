@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { TopMenuComponent } from './top-menu/top-menu.component';
-import { GatesInfoComponent } from './gates-info/gates-info.component';
+import { EditDialogComponent, AddDialogComponent, GatesInfoComponent } from './gates-info/gates-info.component';
 import { NotificationsListComponent } from './notifications-list/notifications-list.component';
 import { Routes, RouterModule } from '@angular/router'
 import { NewServiceService } from './new-service.service';
@@ -16,7 +16,8 @@ import { DialogContentExampleDialogComponentComponent } from './dialog-content-e
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
-
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatButtonModule } from '@angular/material/button';
 const appRoutes: Routes = [
   {path: 'home', component : TopMenuComponent},
   {path: 'gatesinfo', component : GatesInfoComponent},
@@ -32,7 +33,9 @@ const appRoutes: Routes = [
     GatesInfoComponent,
     NotificationsListComponent,
     HomePageComponent,
-    DialogContentExampleDialogComponentComponent
+    DialogContentExampleDialogComponentComponent,
+    EditDialogComponent,
+    AddDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -44,7 +47,10 @@ const appRoutes: Routes = [
     MatSliderModule,
     MatDialogModule,
     MatFormFieldModule,
-    MatInputModule
+    MatPaginatorModule,
+    MatInputModule,
+    MatButtonModule,
+    MatSliderModule,
   ],
   entryComponents:[
     DialogContentExampleDialogComponentComponent

@@ -1,20 +1,48 @@
-<h2 mat-dialog-title>Create entrance</h2>
-<mat-dialog-content class="mat-typography">
-  <div class="example-container">
-    <mat-form-field appearance="fill">
-      <mat-label>Name</mat-label>
-      <input matInput [(ngModel)]="gate.name">
+<div class="block">
+  <h2 mat-dialog-title>Добавить</h2>
+  
+  <mat-form-field style="width: 40vh">
+    <mat-label>id</mat-label>
+    <input matInput [(ngModel)]="gate.id">
+  </mat-form-field>
+  
+  <mat-form-field style="width: 40vh">
+    <mat-label>Название</mat-label>
+    <input matInput [(ngModel)]="gate.name">
+  </mat-form-field>
+  
+  <mat-form-field style="width: 40vh">
+    <mat-label>Описание</mat-label>
+    <input matInput [(ngModel)]="gate.description">
+  </mat-form-field>
+  
+  <mat-form-field style="width: 40vh">
+    <mat-label>TypeId</mat-label>
+    <input matInput [(ngModel)]="gate.typeId">
+  </mat-form-field>
+  
+  <mat-form-field style="width: 40vh">
+    <mat-label>BuildingId</mat-label>
+    <input matInput [(ngModel)]="gate.buildingId">
+  </mat-form-field>
+  
+    <mat-form-field style="width: 40vh">
+      <mat-label>roleId</mat-label>
+      <input matInput [(ngModel)]="gate.roleId" >
+      <mat-error *ngIf="formControl.hasError('required')">
+        RoleId is <strong>required</strong>
+      </mat-error>
     </mat-form-field>
-
-    <br>
-    <mat-form-field appearance="fill">
-      <mat-label>Description</mat-label>
-      <input matInput [(ngModel)]="gate.description">
-    </mat-form-field>
-    
+  
+  <mat-form-field style="width: 40vh">
+    <mat-label>active</mat-label>
+    <input matInput placeholder="true/false" [(ngModel)]="gate.isActive">
+  </mat-form-field>
+  
+    <div class="buttons">
+  <mat-dialog-actions>
+    <button mat-raised-button mat-dialog-close>Отмена</button>
+    <button mat-raised-button [mat-dialog-close]="true" (click)="addGate(gate)">Добавить</button>
+  </mat-dialog-actions>
+    </div>
   </div>
-</mat-dialog-content>
-<mat-dialog-actions align="end">
-  <button mat-button mat-dialog-close>Cancel</button>
-  <button mat-button [mat-dialog-close]="true"  (click) = "addGate(gate)" >Create</button>
-</mat-dialog-actions>

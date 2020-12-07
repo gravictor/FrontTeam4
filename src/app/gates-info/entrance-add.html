@@ -1,0 +1,48 @@
+<div class="block">
+    <h2 mat-dialog-title>Добавить</h2>
+    
+    <mat-form-field style="width: 40vh">
+      <mat-label>id</mat-label>
+      <input matInput [(ngModel)]="entrance.id">
+    </mat-form-field>
+    
+    <mat-form-field style="width: 40vh">
+      <mat-label>Название</mat-label>
+      <input matInput [(ngModel)]="entrance.name">
+    </mat-form-field>
+    
+    <mat-form-field style="width: 40vh">
+      <mat-label>Описание</mat-label>
+      <input matInput [(ngModel)]="entrance.description">
+    </mat-form-field>
+    
+    <mat-form-field style="width: 40vh">
+      <mat-label>TypeId</mat-label>
+      <input matInput [(ngModel)]="entrance.typeId">
+    </mat-form-field>
+    
+    <mat-form-field style="width: 40vh">
+      <mat-label>BuildingId</mat-label>
+      <input matInput [(ngModel)]="entrance.buildingId">
+    </mat-form-field>
+    
+      <mat-form-field style="width: 40vh">
+        <mat-label>roleId</mat-label>
+        <input matInput [(ngModel)]="roles">
+        <mat-error *ngIf="formControl.hasError('required')">
+          RoleId is <strong>required</strong>
+        </mat-error>
+      </mat-form-field>
+    
+    <mat-form-field style="width: 40vh">
+      <mat-label>active</mat-label>
+      <input matInput placeholder="true/false" [(ngModel)]="entrance.active">
+    </mat-form-field>
+    
+      <div class="buttons">
+    <mat-dialog-actions>
+      <button mat-raised-button mat-dialog-close>Отмена</button>
+      <button mat-raised-button [mat-dialog-close]="true" (click)="newGate()">Добавить</button>
+    </mat-dialog-actions>
+      </div>
+    </div>

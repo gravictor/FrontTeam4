@@ -3,7 +3,6 @@ import { HttpClient } from '@angular/common/http';
 import { FormControl, NgForm, Validators} from '@angular/forms';
 import { Gate } from '../gate';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog'
-import { DialogContentExampleDialogComponentComponent } from '../dialog-content-example-dialog-component/dialog-content-example-dialog-component.component';
 
 export interface DialogData {
   animal: string;
@@ -22,15 +21,7 @@ export class GatesInfoComponent implements OnInit {
   responce: any;
   name: String | undefined;
   constructor(private http: HttpClient, private dialog: MatDialog) { }
-  openDialog(): void {
-    const dialogRef = this.dialog.open(DialogContentExampleDialogComponentComponent, {
-      width: '400px',
-    });
-
-    dialogRef.afterClosed().subscribe(result => {
-      console.log('The dialog was closed');
-    });
-  }
+  
   show(){
     this.responce = this.http
     .get(this.URL+'select-all');
@@ -52,7 +43,7 @@ openEditDialog(gat: Gate): void{
 }
 
 openAddDialog(): void{
-  const dialogRef = this.dialog.open(EditDialogComponent);
+  const dialogRef = this.dialog.open(AddDialogComponent);
 
   dialogRef.afterClosed().subscribe(result => {
     console.log(`Dialog result: ${result}`);
@@ -75,7 +66,7 @@ export class EditDialogComponent {
   ]);
   confirmUpdate(){
     console.log(this.gate);
-    this.http.post<any>('http://localhost:8080/entrance/' + '/entrance/update-entrance', this.gate)
+    this.http.put<any>('http://localhost:8080/entrance/update-entrance', this.gate)
     .subscribe(data => {
       console.log(data)
     });
@@ -98,15 +89,9 @@ export class AddDialogComponent {
   roles: string = "";
 
   newGate(): void{
-    let i = 0;
-    let temp = 0;
-    for (i; i < this.roles.length; i++){
-      if ( parseInt(this.roles[i]) ) {
-        this.entrance.roleId[temp] = Number(this.roles[i]);
-        temp++;
-      }
-    }
-    this.http.post('http://localhost:8080/entrance/'+'insert-entrance', this.entrance)
+    this.entrance.roleId = [6];
+    console.log(this.entrance);
+    this.http.post('http://localhost:8080/entrance/insert-entrance', this.entrance)
     .subscribe(data => {
       console.log(data)
     });

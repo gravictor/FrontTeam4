@@ -12,7 +12,6 @@ import { NewServiceService } from './new-service.service';
 import { HomePageComponent } from './home-page/home-page.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSliderModule } from '@angular/material/slider';
-import { DialogContentExampleDialogComponentComponent } from './dialog-content-example-dialog-component/dialog-content-example-dialog-component.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
@@ -33,7 +32,6 @@ const appRoutes: Routes = [
     GatesInfoComponent,
     NotificationsListComponent,
     HomePageComponent,
-    DialogContentExampleDialogComponentComponent,
     EditDialogComponent,
     AddDialogComponent
   ],
@@ -51,9 +49,6 @@ const appRoutes: Routes = [
     MatInputModule,
     MatButtonModule,
     MatSliderModule,
-  ],
-  entryComponents:[
-    DialogContentExampleDialogComponentComponent
   ],
   providers: [NewServiceService],
   bootstrap: [AppComponent]

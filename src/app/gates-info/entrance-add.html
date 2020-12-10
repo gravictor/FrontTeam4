@@ -28,7 +28,7 @@
     
       <mat-form-field style="width: 40vh">
         <mat-label>roleId</mat-label>
-        <input matInput [(ngModel)]="roles">
+        <input matInput [(ngModel)]="entrance.roleId">
         <mat-error *ngIf="formControl.hasError('required')">
           RoleId is <strong>required</strong>
         </mat-error>

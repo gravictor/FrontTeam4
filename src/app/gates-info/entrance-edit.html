@@ -8,35 +8,32 @@
   
     <mat-form-field style="width: 40vh">
       <mat-label>Название</mat-label>
-      <input matInput value="{{gate.name}}">
+      <input matInput [(ngModel)]="gate.name" value="{{gate.name}}">
     </mat-form-field>
   
     <mat-form-field style="width: 40vh">
       <mat-label>Описание</mat-label>
-      <input matInput value="{{gate.description}}">
+      <input matInput [(ngModel)]="gate.description" value="{{gate.description}}">
     </mat-form-field>
   
     <mat-form-field style="width: 40vh">
       <mat-label>TypeId</mat-label>
-      <input matInput value="{{gate.typeId}}">
+      <input matInput [(ngModel)]="gate.typeId" value="{{gate.typeId}}">
     </mat-form-field>
   
     <mat-form-field style="width: 40vh">
       <mat-label>BuildingId</mat-label>
-      <input matInput value="{{gate.buildingId}}">
+      <input matInput [(ngModel)]="gate.buildingId" value="{{gate.buildingId}}">
     </mat-form-field>
   
     <mat-form-field style="width: 40vh">
       <mat-label>roleId</mat-label>
-      <input matInput value="{{gate.roleId}}">
-      <mat-error *ngIf="formControl.hasError('required')">
-        RoleId is <strong>required</strong>
-      </mat-error>
+      <input matInput [(ngModel)]="gate.roleId" value="{{gate.roleId}}">
     </mat-form-field>
   
     <mat-form-field style="width: 40vh">
       <mat-label>active</mat-label>
-      <input matInput value="{{gate.isActive}}">
+      <input matInput [(ngModel)]="gate.active" value="{{gate.active}}">
     </mat-form-field>
   
     <mat-dialog-actions>
